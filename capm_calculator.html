@@ -26,7 +26,6 @@
     --red: #e05c5c;
     --red-dim: rgba(224,92,92,0.1);
     --blue: #5c8fe0;
-    --blue-dim: rgba(92,143,224,0.1);
     --radius: 12px;
     --radius-sm: 8px;
   }
@@ -44,14 +43,12 @@
 
   body::before {
     content: '';
-    position: fixed;
-    inset: 0;
+    position: fixed; inset: 0;
     background-image:
       linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
     background-size: 60px 60px;
-    pointer-events: none;
-    z-index: 0;
+    pointer-events: none; z-index: 0;
   }
 
   body::after {
@@ -60,64 +57,46 @@
     top: -200px; left: 50%; transform: translateX(-50%);
     width: 800px; height: 500px;
     background: radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
+    pointer-events: none; z-index: 0;
   }
 
   .page {
-    position: relative;
-    z-index: 1;
-    max-width: 960px;
-    margin: 0 auto;
+    position: relative; z-index: 1;
+    max-width: 960px; margin: 0 auto;
     padding: 60px 32px 100px;
   }
 
   .site-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 64px;
-    padding-bottom: 28px;
+    display: flex; align-items: flex-start; justify-content: space-between;
+    margin-bottom: 64px; padding-bottom: 28px;
     border-bottom: 1px solid var(--border);
   }
 
   .logo-block .eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 6px;
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.18em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 6px;
   }
 
   .logo-block h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: var(--text);
-    letter-spacing: -0.01em;
-    line-height: 1.1;
+    font-family: 'DM Serif Display', serif; font-size: 28px;
+    font-weight: 400; color: var(--text);
+    letter-spacing: -0.01em; line-height: 1.1;
   }
 
   .header-meta { text-align: right; }
 
   .header-meta .date-pill {
     display: inline-block;
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    background: var(--bg3);
-    border: 1px solid var(--border);
-    border-radius: 99px;
-    padding: 5px 14px;
-    margin-bottom: 8px;
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    color: var(--muted); background: var(--bg3);
+    border: 1px solid var(--border); border-radius: 99px;
+    padding: 5px 14px; margin-bottom: 8px;
   }
 
   .header-meta .formula-display {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--hint);
-    line-height: 1.8;
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    color: var(--hint); line-height: 1.8;
   }
 
   .formula-display em { color: var(--gold); font-style: normal; }
@@ -125,37 +104,25 @@
   .search-section { margin-bottom: 56px; }
 
   .search-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 14px;
-    display: block;
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 14px; display: block;
   }
 
   .search-row { display: flex; gap: 12px; align-items: center; }
 
   .ticker-input {
-    flex: 1;
-    height: 52px;
-    background: var(--bg2);
-    border: 1px solid var(--border-em);
-    border-radius: var(--radius);
-    padding: 0 20px;
-    font-family: 'DM Serif Display', serif;
-    font-size: 20px;
-    color: var(--text);
-    letter-spacing: 0.08em;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    outline: none;
+    flex: 1; height: 52px;
+    background: var(--bg2); border: 1px solid var(--border-em);
+    border-radius: var(--radius); padding: 0 20px;
+    font-family: 'DM Serif Display', serif; font-size: 20px;
+    color: var(--text); letter-spacing: 0.08em;
+    transition: border-color 0.2s, box-shadow 0.2s; outline: none;
   }
 
   .ticker-input::placeholder {
-    color: var(--hint);
-    font-size: 16px;
-    letter-spacing: 0;
-    font-family: 'Instrument Sans', sans-serif;
+    color: var(--hint); font-size: 16px;
+    letter-spacing: 0; font-family: 'Instrument Sans', sans-serif;
   }
 
   .ticker-input:focus {
@@ -164,19 +131,13 @@
   }
 
   .calc-btn {
-    height: 52px;
-    padding: 0 28px;
-    background: var(--gold);
-    color: #0a0a0f;
-    border: none;
-    border-radius: var(--radius);
+    height: 52px; padding: 0 28px;
+    background: var(--gold); color: #0a0a0f;
+    border: none; border-radius: var(--radius);
     font-family: 'Instrument Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
+    font-size: 14px; font-weight: 600; cursor: pointer;
     letter-spacing: 0.04em;
-    transition: opacity 0.15s, transform 0.1s;
-    white-space: nowrap;
+    transition: opacity 0.15s, transform 0.1s; white-space: nowrap;
   }
 
   .calc-btn:hover { opacity: 0.88; }
@@ -184,64 +145,111 @@
   .calc-btn:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
 
   .example-tickers {
-    margin-top: 12px;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    align-items: center;
+    margin-top: 12px; display: flex;
+    gap: 8px; flex-wrap: wrap; align-items: center;
   }
 
   .ex-label { font-size: 12px; color: var(--hint); }
 
   .ex-chip {
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    color: var(--muted);
-    background: var(--bg3);
-    border: 1px solid var(--border);
-    border-radius: 99px;
-    padding: 4px 12px;
-    cursor: pointer;
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    color: var(--muted); background: var(--bg3);
+    border: 1px solid var(--border); border-radius: 99px;
+    padding: 4px 12px; cursor: pointer;
     transition: border-color 0.15s, color 0.15s;
   }
 
   .ex-chip:hover { border-color: var(--gold); color: var(--gold); }
 
-  .loading-state {
+  /* ── MANUAL BETA ENTRY ── */
+  .manual-section {
     display: none;
-    padding: 32px;
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    margin-bottom: 32px;
+    background: var(--bg2); border: 1px solid rgba(201,168,76,0.25);
+    border-radius: var(--radius); padding: 28px 32px; margin-bottom: 32px;
+  }
+
+  .manual-eyebrow {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 10px;
+  }
+
+  .manual-title {
+    font-family: 'DM Serif Display', serif; font-size: 22px;
+    color: var(--text); margin-bottom: 6px;
+  }
+
+  .manual-desc {
+    font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 20px;
+  }
+
+  .manual-desc a { color: var(--gold); text-decoration: none; }
+  .manual-desc a:hover { text-decoration: underline; }
+
+  .manual-fields { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+
+  .manual-field { display: flex; flex-direction: column; gap: 6px; }
+
+  .manual-field label {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--hint);
+  }
+
+  .manual-input {
+    height: 46px; width: 150px;
+    background: var(--bg3); border: 1px solid var(--border-em);
+    border-radius: var(--radius-sm); padding: 0 16px;
+    font-family: 'DM Mono', monospace; font-size: 16px;
+    color: var(--text); outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .manual-input:focus {
+    border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-dim);
+  }
+
+  .manual-btn {
+    height: 46px; padding: 0 24px;
+    background: var(--gold); color: #0a0a0f;
+    border: none; border-radius: var(--radius-sm);
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 14px; font-weight: 600; cursor: pointer;
+    transition: opacity 0.15s;
+  }
+
+  .manual-btn:hover { opacity: 0.88; }
+
+  .ticker-count {
+    margin-top: 12px;
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    color: var(--hint); letter-spacing: 0.05em;
+  }
+
+  /* ── LOADING / ERROR ── */
+  .loading-state {
+    display: none; padding: 32px;
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius); margin-bottom: 32px;
   }
 
   .loading-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 
   .spinner {
     width: 16px; height: 16px;
-    border: 2px solid var(--border-em);
-    border-top-color: var(--gold);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    flex-shrink: 0;
+    border: 2px solid var(--border-em); border-top-color: var(--gold);
+    border-radius: 50%; animation: spin 0.8s linear infinite; flex-shrink: 0;
   }
 
   @keyframes spin { to { transform: rotate(360deg); } }
 
   .loading-title {
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    color: var(--gold);
-    letter-spacing: 0.08em;
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    color: var(--gold); letter-spacing: 0.08em;
   }
 
   .log-lines {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--hint);
-    line-height: 2;
-    min-height: 44px;
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    color: var(--hint); line-height: 2; min-height: 44px;
   }
 
   .log-line { animation: fadeIn 0.3s ease; }
@@ -249,103 +257,72 @@
   @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 
   .error-state {
-    display: none;
-    padding: 20px 24px;
+    display: none; padding: 20px 24px;
     background: var(--red-dim);
     border: 1px solid rgba(224,92,92,0.25);
-    border-radius: var(--radius);
-    color: var(--red);
-    font-size: 13px;
-    margin-bottom: 32px;
+    border-radius: var(--radius); color: var(--red);
+    font-size: 13px; margin-bottom: 32px;
   }
 
+  /* ── RESULTS ── */
   .results { display: none; }
 
   .company-banner {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-bottom: 28px;
-    padding-bottom: 20px;
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 28px; padding-bottom: 20px;
     border-bottom: 1px solid var(--border);
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-wrap: wrap; gap: 12px;
   }
 
   .company-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: var(--text);
-    letter-spacing: -0.02em;
+    font-family: 'DM Serif Display', serif; font-size: 32px;
+    font-weight: 400; color: var(--text); letter-spacing: -0.02em;
   }
 
   .company-meta { display: flex; align-items: center; gap: 16px; }
 
   .ticker-badge {
-    font-family: 'DM Mono', monospace;
-    font-size: 13px;
-    color: var(--gold);
-    background: var(--gold-dim);
+    font-family: 'DM Mono', monospace; font-size: 13px;
+    color: var(--gold); background: var(--gold-dim);
     border: 1px solid rgba(201,168,76,0.25);
-    border-radius: 6px;
-    padding: 4px 12px;
-    letter-spacing: 0.08em;
+    border-radius: 6px; padding: 4px 12px; letter-spacing: 0.08em;
   }
 
   .price-display {
-    font-family: 'DM Mono', monospace;
-    font-size: 14px;
-    color: var(--text);
+    font-family: 'DM Mono', monospace; font-size: 14px; color: var(--text);
   }
 
   .capm-hero {
-    background: var(--bg2);
-    border: 1px solid var(--border-em);
-    border-radius: var(--radius);
-    padding: 36px 40px;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
+    background: var(--bg2); border: 1px solid var(--border-em);
+    border-radius: var(--radius); padding: 36px 40px;
+    margin-bottom: 20px; position: relative; overflow: hidden;
   }
 
   .capm-hero::before {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
+    content: ''; position: absolute; top: -60px; right: -60px;
     width: 220px; height: 220px;
     background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
     pointer-events: none;
   }
 
   .hero-eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 12px;
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 12px;
   }
 
   .hero-return {
-    font-family: 'DM Serif Display', serif;
-    font-size: 64px;
-    font-weight: 400;
-    color: var(--gold);
-    line-height: 1;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
+    font-family: 'DM Serif Display', serif; font-size: 64px;
+    font-weight: 400; color: var(--gold);
+    line-height: 1; letter-spacing: -0.02em; margin-bottom: 8px;
   }
 
   .hero-subtitle { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
 
   .formula-breakdown {
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    color: var(--hint);
-    line-height: 2.2;
-    border-top: 1px solid var(--border);
-    padding-top: 20px;
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    color: var(--hint); line-height: 2.2;
+    border-top: 1px solid var(--border); padding-top: 20px;
   }
 
   .formula-breakdown .step { display: flex; align-items: center; gap: 10px; }
@@ -354,107 +331,68 @@
   .formula-breakdown .step-final .step-val { color: var(--gold); font-size: 14px; font-weight: 500; }
 
   .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 20px;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 12px; margin-bottom: 20px;
   }
 
   .metric-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 18px 20px;
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 18px 20px;
     transition: border-color 0.2s;
   }
 
   .metric-card:hover { border-color: var(--border-em); }
 
   .metric-key {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--hint);
-    margin-bottom: 10px;
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--hint); margin-bottom: 10px;
   }
 
   .metric-val {
-    font-family: 'DM Serif Display', serif;
-    font-size: 26px;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: 4px;
+    font-family: 'DM Serif Display', serif; font-size: 26px;
+    font-weight: 400; color: var(--text); margin-bottom: 4px;
   }
 
   .metric-desc { font-size: 11px; color: var(--hint); line-height: 1.5; }
 
   .data-tag {
-    display: inline-block;
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 2px 7px;
-    border-radius: 4px;
-    margin-bottom: 6px;
+    display: inline-block; font-family: 'DM Mono', monospace;
+    font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 4px; margin-bottom: 6px;
   }
 
-  .tag-live { background: rgba(76,175,125,0.12); color: var(--green); border: 1px solid rgba(76,175,125,0.2); }
-  .tag-est  { background: rgba(201,168,76,0.1);  color: var(--gold);  border: 1px solid rgba(201,168,76,0.2); }
+  .tag-est { background: rgba(201,168,76,0.1); color: var(--gold); border: 1px solid rgba(201,168,76,0.2); }
 
   .chart-section {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px 32px;
-    margin-bottom: 20px;
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px 32px; margin-bottom: 20px;
   }
 
   .section-header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 20px;
   }
 
   .section-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--text);
+    font-family: 'DM Serif Display', serif; font-size: 18px;
+    font-weight: 400; color: var(--text);
   }
 
-  .section-hint {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--hint);
-  }
+  .section-hint { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--hint); }
 
   .chart-wrap { position: relative; height: 280px; }
 
   .analysis-section {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px 32px;
-    margin-bottom: 20px;
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px 32px; margin-bottom: 20px;
   }
 
-  .analysis-body {
-    font-size: 15px;
-    color: #b8b7b0;
-    line-height: 1.8;
-    margin-top: 16px;
-  }
-
+  .analysis-body { font-size: 15px; color: #b8b7b0; line-height: 1.8; margin-top: 16px; }
   .analysis-body p + p { margin-top: 14px; }
 
   .verdict-section {
-    border-radius: var(--radius);
-    padding: 28px 32px;
-    margin-bottom: 20px;
-    border: 1px solid;
+    border-radius: var(--radius); padding: 28px 32px;
+    margin-bottom: 20px; border: 1px solid;
   }
 
   .verdict-section.buy  { background: var(--green-dim); border-color: rgba(76,175,125,0.25); }
@@ -464,11 +402,9 @@
   .verdict-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
 
   .verdict-icon {
-    width: 44px; height: 44px;
-    border-radius: 50%;
+    width: 44px; height: 44px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
+    font-size: 20px; flex-shrink: 0;
   }
 
   .buy  .verdict-icon { background: rgba(76,175,125,0.18); }
@@ -476,54 +412,39 @@
   .sell .verdict-icon { background: rgba(224,92,92,0.18); }
 
   .verdict-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
   }
+
   .buy  .verdict-label { color: var(--green); }
   .hold .verdict-label { color: var(--gold); }
   .sell .verdict-label { color: var(--red); }
 
   .verdict-headline {
-    font-family: 'DM Serif Display', serif;
-    font-size: 22px;
-    font-weight: 400;
-    color: var(--text);
-    margin-top: 4px;
+    font-family: 'DM Serif Display', serif; font-size: 22px;
+    font-weight: 400; color: var(--text); margin-top: 4px;
   }
 
   .verdict-body { font-size: 14px; color: #a0a09a; line-height: 1.8; }
 
   .verdict-disclaimer {
-    margin-top: 14px;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--hint);
-    letter-spacing: 0.05em;
+    margin-top: 14px; font-family: 'DM Mono', monospace;
+    font-size: 10px; color: var(--hint); letter-spacing: 0.05em;
   }
 
   .sources-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
 
   .source-pill {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--hint);
-    background: var(--bg3);
-    border: 1px solid var(--border);
-    border-radius: 99px;
-    padding: 4px 12px;
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    color: var(--hint); background: var(--bg3);
+    border: 1px solid var(--border); border-radius: 99px; padding: 4px 12px;
   }
 
   .footer-note {
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 40px; padding-top: 20px;
     border-top: 1px solid var(--border);
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--hint);
-    line-height: 1.8;
-    letter-spacing: 0.04em;
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    color: var(--hint); line-height: 1.8; letter-spacing: 0.04em;
   }
 
   @media (max-width: 640px) {
@@ -532,17 +453,15 @@
     .header-meta { text-align: left; }
     .metrics-grid { grid-template-columns: repeat(2, 1fr); }
     .hero-return { font-size: 48px; }
-    .capm-hero { padding: 24px 24px; }
-    .chart-section, .analysis-section, .verdict-section { padding: 20px 20px; }
+    .capm-hero, .chart-section, .analysis-section, .verdict-section { padding: 20px 20px; }
+    .manual-fields { flex-direction: column; }
+    .manual-input { width: 100%; }
   }
 
   .fade-in { animation: fadeUp 0.5s ease both; }
-  .d1 { animation-delay: 0.05s; }
-  .d2 { animation-delay: 0.12s; }
-  .d3 { animation-delay: 0.20s; }
-  .d4 { animation-delay: 0.28s; }
-  .d5 { animation-delay: 0.36s; }
-  .d6 { animation-delay: 0.44s; }
+  .d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.12s; }
+  .d3 { animation-delay: 0.20s; } .d4 { animation-delay: 0.28s; }
+  .d5 { animation-delay: 0.36s; } .d6 { animation-delay: 0.44s; }
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: none; }
@@ -581,12 +500,39 @@
       <span class="ex-chip" onclick="setTicker('JPM')">JPM</span>
       <span class="ex-chip" onclick="setTicker('AMZN')">AMZN</span>
     </div>
+    <div class="ticker-count" id="ticker-count"></div>
   </section>
+
+  <!-- MANUAL BETA ENTRY (shown when ticker not in database) -->
+  <div class="manual-section" id="manual-section">
+    <div class="manual-eyebrow">Ticker Not in Database</div>
+    <div class="manual-title" id="manual-title">Enter Beta Manually</div>
+    <div class="manual-desc">
+      We don't have <strong id="manual-ticker-name">this ticker</strong> in our database yet.
+      Look up the beta on <a id="yahoo-link" href="https://finance.yahoo.com" target="_blank">Yahoo Finance</a>
+      (it's under Statistics → Beta (5Y Monthly)), then enter it below.
+    </div>
+    <div class="manual-fields">
+      <div class="manual-field">
+        <label>Beta (β) *</label>
+        <input class="manual-input" id="manual-beta" type="number" step="0.01" placeholder="e.g. 1.25" min="-5" max="10"/>
+      </div>
+      <div class="manual-field">
+        <label>P/E Ratio (optional)</label>
+        <input class="manual-input" id="manual-pe" type="number" step="0.1" placeholder="e.g. 28.5" min="0"/>
+      </div>
+      <div class="manual-field">
+        <label>Market Cap $B (optional)</label>
+        <input class="manual-input" id="manual-mcap" type="number" step="1" placeholder="e.g. 850" min="0"/>
+      </div>
+      <button class="manual-btn" onclick="runManual()">Calculate →</button>
+    </div>
+  </div>
 
   <div class="loading-state" id="loading-state">
     <div class="loading-header">
       <div class="spinner"></div>
-      <div class="loading-title" id="loading-ticker-label">FETCHING LIVE DATA</div>
+      <div class="loading-title" id="loading-ticker-label">COMPUTING CAPM</div>
     </div>
     <div class="log-lines" id="log-lines"></div>
   </div>
@@ -599,7 +545,7 @@
       <div class="company-name" id="r-company">—</div>
       <div class="company-meta">
         <div class="ticker-badge" id="r-ticker">—</div>
-        <div class="price-display" id="r-price">—</div>
+        <div class="price-display" id="r-price"></div>
       </div>
     </div>
 
@@ -619,13 +565,13 @@
         <div class="data-tag tag-est">Estimate</div>
         <div class="metric-key">Risk-Free Rate (Rf)</div>
         <div class="metric-val" id="r-rf">—</div>
-        <div class="metric-desc" id="r-rf-src">US 10-Year Treasury (approximate)</div>
+        <div class="metric-desc">US 10-Year Treasury (approximate)</div>
       </div>
       <div class="metric-card">
-        <div class="data-tag tag-live">Live</div>
+        <div class="data-tag tag-est">Estimate</div>
         <div class="metric-key">Beta (β)</div>
         <div class="metric-val" id="r-beta">—</div>
-        <div class="metric-desc" id="r-beta-desc">5-year monthly vs. S&P 500 · Yahoo Finance</div>
+        <div class="metric-desc" id="r-beta-desc">5-year monthly vs. S&P 500</div>
       </div>
       <div class="metric-card">
         <div class="data-tag tag-est">Estimate</div>
@@ -655,15 +601,11 @@
         <div class="section-title">Return Spectrum</div>
         <div class="section-hint">Rf · CAPM E(R) · Rm · and how beta scales risk</div>
       </div>
-      <div class="chart-wrap">
-        <canvas id="capm-chart"></canvas>
-      </div>
+      <div class="chart-wrap"><canvas id="capm-chart"></canvas></div>
     </div>
 
     <div class="analysis-section fade-in d5">
-      <div class="section-header">
-        <div class="section-title">Analysis</div>
-      </div>
+      <div class="section-header"><div class="section-title">Analysis</div></div>
       <div class="analysis-body" id="r-analysis">—</div>
     </div>
 
@@ -687,16 +629,80 @@
   </div>
 
   <div class="footer-note">
-    CAPM — Sharpe (1964), Lintner (1965) &nbsp;·&nbsp; E(R) = Rf + β(Rm − Rf) &nbsp;·&nbsp; Market return assumes 10% nominal S&P 500 long-run avg &nbsp;·&nbsp; Data via Yahoo Finance &nbsp;·&nbsp; For academic use only
+    CAPM — Sharpe (1964), Lintner (1965) &nbsp;·&nbsp; E(R) = Rf + β(Rm − Rf) &nbsp;·&nbsp;
+    Beta data approximate · updated periodically &nbsp;·&nbsp; For academic use only
   </div>
 
 </div>
 
 <script>
-const d = new Date();
+// ── DATE ──
 document.getElementById('live-date').textContent =
-  d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'});
+  new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'});
 
+// ── STOCK DATABASE ──
+// Beta values sourced from Yahoo Finance (5Y monthly vs S&P 500), approximate as of Q1 2026
+const STOCKS = {
+  'AAPL':  { name: 'Apple Inc.',                    beta: 1.24, pe: 33.2,  mcapB: 3100 },
+  'MSFT':  { name: 'Microsoft Corporation',         beta: 0.90, pe: 35.4,  mcapB: 3050 },
+  'NVDA':  { name: 'NVIDIA Corporation',            beta: 1.68, pe: 54.8,  mcapB: 2180 },
+  'AMZN':  { name: 'Amazon.com Inc.',               beta: 1.15, pe: 43.1,  mcapB: 2090 },
+  'GOOGL': { name: 'Alphabet Inc.',                 beta: 1.05, pe: 21.8,  mcapB: 2050 },
+  'GOOG':  { name: 'Alphabet Inc. (Class C)',       beta: 1.04, pe: 21.6,  mcapB: 2050 },
+  'META':  { name: 'Meta Platforms Inc.',           beta: 1.22, pe: 27.3,  mcapB: 1440 },
+  'TSLA':  { name: 'Tesla Inc.',                    beta: 2.31, pe: 85.4,  mcapB:  895 },
+  'BRK.B': { name: 'Berkshire Hathaway Inc.',       beta: 0.89, pe: 10.2,  mcapB: 1050 },
+  'JPM':   { name: 'JPMorgan Chase & Co.',          beta: 1.15, pe: 13.1,  mcapB:  695 },
+  'V':     { name: 'Visa Inc.',                     beta: 0.95, pe: 30.4,  mcapB:  650 },
+  'MA':    { name: 'Mastercard Incorporated',       beta: 1.10, pe: 34.2,  mcapB:  490 },
+  'UNH':   { name: 'UnitedHealth Group Inc.',       beta: 0.72, pe: 18.4,  mcapB:  440 },
+  'XOM':   { name: 'Exxon Mobil Corporation',       beta: 0.88, pe: 14.2,  mcapB:  460 },
+  'WMT':   { name: 'Walmart Inc.',                  beta: 0.59, pe: 37.8,  mcapB:  770 },
+  'ORCL':  { name: 'Oracle Corporation',            beta: 0.98, pe: 43.1,  mcapB:  460 },
+  'JNJ':   { name: 'Johnson & Johnson',             beta: 0.56, pe: 15.1,  mcapB:  370 },
+  'PG':    { name: 'Procter & Gamble Co.',          beta: 0.59, pe: 27.8,  mcapB:  400 },
+  'GS':    { name: 'The Goldman Sachs Group Inc.',  beta: 1.35, pe: 15.8,  mcapB:  190 },
+  'BAC':   { name: 'Bank of America Corporation',   beta: 1.32, pe: 13.8,  mcapB:  340 },
+  'NFLX':  { name: 'Netflix Inc.',                  beta: 1.45, pe: 48.2,  mcapB:  425 },
+  'CRM':   { name: 'Salesforce Inc.',               beta: 1.28, pe: 65.1,  mcapB:  305 },
+  'AMD':   { name: 'Advanced Micro Devices Inc.',   beta: 1.85, pe: 30.4,  mcapB:  170 },
+  'IBM':   { name: 'IBM Corporation',               beta: 0.75, pe: 25.8,  mcapB:  215 },
+  'INTC':  { name: 'Intel Corporation',             beta: 0.98, pe: null,  mcapB:   90 },
+  'CVX':   { name: 'Chevron Corporation',           beta: 1.02, pe: 15.1,  mcapB:  285 },
+  'BA':    { name: 'The Boeing Company',            beta: 1.42, pe: null,  mcapB:  130 },
+  'CAT':   { name: 'Caterpillar Inc.',              beta: 1.25, pe: 17.2,  mcapB:  175 },
+  'KO':    { name: 'The Coca-Cola Company',         beta: 0.55, pe: 25.1,  mcapB:  310 },
+  'PFE':   { name: 'Pfizer Inc.',                   beta: 0.63, pe: 10.4,  mcapB:  140 },
+  'DIS':   { name: 'The Walt Disney Company',       beta: 1.08, pe: 27.8,  mcapB:  200 },
+  'MCD':   { name: "McDonald's Corporation",        beta: 0.72, pe: 25.4,  mcapB:  215 },
+  'NKE':   { name: 'Nike Inc.',                     beta: 0.85, pe: 22.1,  mcapB:  110 },
+  'SBUX':  { name: 'Starbucks Corporation',         beta: 0.85, pe: 28.4,  mcapB:   94 },
+  'T':     { name: 'AT&T Inc.',                     beta: 0.75, pe: 17.8,  mcapB:  165 },
+  'VZ':    { name: 'Verizon Communications Inc.',   beta: 0.50, pe: 14.8,  mcapB:  175 },
+  'PYPL':  { name: 'PayPal Holdings Inc.',          beta: 1.55, pe: 17.1,  mcapB:   70 },
+  'UBER':  { name: 'Uber Technologies Inc.',        beta: 1.42, pe: 35.2,  mcapB:  155 },
+  'ABNB':  { name: 'Airbnb Inc.',                   beta: 1.65, pe: 39.8,  mcapB:   82 },
+  'SHOP':  { name: 'Shopify Inc.',                  beta: 1.65, pe: 70.4,  mcapB:  115 },
+  'SNOW':  { name: 'Snowflake Inc.',                beta: 1.45, pe: null,  mcapB:   50 },
+  'PLTR':  { name: 'Palantir Technologies Inc.',    beta: 2.15, pe: 198.4, mcapB:  195 },
+  'COIN':  { name: 'Coinbase Global Inc.',          beta: 3.20, pe: 30.1,  mcapB:   45 },
+  'AMD':   { name: 'Advanced Micro Devices Inc.',   beta: 1.85, pe: 30.4,  mcapB:  170 },
+  'SPOT':  { name: 'Spotify Technology S.A.',       beta: 1.38, pe: 145.2, mcapB:  120 },
+  'HOOD':  { name: 'Robinhood Markets Inc.',        beta: 1.95, pe: 24.8,  mcapB:   16 },
+  'RIVN':  { name: 'Rivian Automotive Inc.',        beta: 2.85, pe: null,  mcapB:   12 },
+  'F':     { name: 'Ford Motor Company',            beta: 1.45, pe: 7.2,   mcapB:   38 },
+  'GM':    { name: 'General Motors Company',        beta: 1.25, pe: 5.1,   mcapB:   47 },
+  'NOW':   { name: 'ServiceNow Inc.',               beta: 1.12, pe: 169.8, mcapB:  195 },
+};
+
+const RF   = 0.044; // ~US 10Y Treasury yield, approximate Q1 2026
+const RM   = 0.10;
+const N    = Object.keys(STOCKS).length;
+
+document.getElementById('ticker-count').textContent =
+  `Database covers ${N} tickers. For others, enter beta manually below.`;
+
+// ── UI HELPERS ──
 function setTicker(t) {
   document.getElementById('ticker-input').value = t;
   document.getElementById('ticker-input').focus();
@@ -706,189 +712,115 @@ document.getElementById('ticker-input').addEventListener('keydown', e => {
   if (e.key === 'Enter') runCAPM();
 });
 
+document.getElementById('manual-beta').addEventListener('keydown', e => {
+  if (e.key === 'Enter') runManual();
+});
+
 let chartInstance = null;
+let currentTicker = '';
 
 function pct(v, dec=2) { return (v*100).toFixed(dec)+'%'; }
 function f2(v) { return parseFloat(v).toFixed(2); }
 
-function addLog(msg) {
-  const box = document.getElementById('log-lines');
-  const el = document.createElement('div');
-  el.className = 'log-line';
+function showError(msg) {
+  const el = document.getElementById('error-state');
   el.textContent = msg;
-  box.appendChild(el);
+  el.style.display = 'block';
 }
 
-// Approximate current US 10Y Treasury yield — update periodically
-const RISK_FREE_RATE = 0.044;
-
-async function fetchStockData(ticker) {
-  const res = await fetch(`/api/quote?ticker=${encodeURIComponent(ticker)}`, {
-    signal: AbortSignal.timeout(12000)
-  });
-
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}));
-    throw new Error(err.error || `Could not fetch data for "${ticker}".`);
-  }
-
-  const json = await res.json();
-
-  if (!json?.quoteSummary?.result?.[0]) {
-    throw new Error(`No data found for "${ticker}". Check the ticker and try again.`);
-  }
-
-  const result = json.quoteSummary.result[0];
-  const ks     = result.defaultKeyStatistics || {};
-  const pr     = result.price               || {};
-  const sd     = result.summaryDetail       || {};
-
-  const beta = ks.beta?.raw ?? sd.beta?.raw;
-  if (beta == null) throw new Error(`Beta not available for "${ticker}".`);
-
-  return {
-    name:       pr.longName || pr.shortName || ticker,
-    price:      pr.regularMarketPrice?.raw,
-    beta:       beta,
-    trailingPE: sd.trailingPE?.raw ?? ks.trailingPE?.raw ?? null,
-    marketCapB: pr.marketCap?.raw ? (pr.marketCap.raw / 1e9) : null,
-  };
+function hideAll() {
+  document.getElementById('loading-state').style.display = 'none';
+  document.getElementById('error-state').style.display   = 'none';
+  document.getElementById('manual-section').style.display = 'none';
+  document.getElementById('results').style.display       = 'none';
 }
 
-async function runCAPM() {
+// ── MAIN LOOKUP ──
+function runCAPM() {
   const ticker = document.getElementById('ticker-input').value.trim().toUpperCase();
   if (!ticker) return;
 
+  currentTicker = ticker;
+  hideAll();
   document.getElementById('calc-btn').disabled = true;
-  document.getElementById('results').style.display = 'none';
-  document.getElementById('error-state').style.display = 'none';
-  document.getElementById('log-lines').innerHTML = '';
-  document.getElementById('loading-ticker-label').textContent = `FETCHING DATA — ${ticker}`;
-  document.getElementById('loading-state').style.display = 'block';
 
-  addLog(`Connecting to Yahoo Finance for ${ticker}...`);
+  const stock = STOCKS[ticker];
 
-  try {
-    const stock = await fetchStockData(ticker);
-    addLog(`Got data for ${stock.name} — computing CAPM...`);
-
-    const rf   = RISK_FREE_RATE;
-    const rm   = 0.10;
-    const beta = stock.beta;
-    const erp  = rm - rf;
-    const er   = rf + beta * erp;
-
-    addLog('Rendering results...');
-    setTimeout(() => renderResults(ticker, stock, rf, rm, beta, er), 300);
-
-  } catch (err) {
-    document.getElementById('loading-state').style.display = 'none';
-    const eBox = document.getElementById('error-state');
-    eBox.style.display = 'block';
-    eBox.textContent = 'Error: ' + err.message;
+  if (!stock) {
+    // Show manual entry form
+    document.getElementById('manual-title').textContent   = `Enter Beta for ${ticker}`;
+    document.getElementById('manual-ticker-name').textContent = ticker;
+    document.getElementById('yahoo-link').href =
+      `https://finance.yahoo.com/quote/${ticker}/key-statistics/`;
+    document.getElementById('manual-section').style.display = 'block';
+    document.getElementById('manual-beta').value  = '';
+    document.getElementById('manual-pe').value    = '';
+    document.getElementById('manual-mcap').value  = '';
+    document.getElementById('manual-beta').focus();
     document.getElementById('calc-btn').disabled = false;
+    return;
   }
+
+  compute(ticker, stock.name, stock.beta, stock.pe, stock.marketCapB, false);
 }
 
-function generateAnalysis(ticker, name, beta, rf, rm, er) {
-  const erp    = rm - rf;
-  const erPct  = (er  * 100).toFixed(1);
-  const rfPct  = (rf  * 100).toFixed(1);
-  const rmPct  = (rm  * 100).toFixed(1);
-  const b      = beta.toFixed(2);
-
-  let p1;
-  if (beta > 1.5) {
-    p1 = `${name} carries a high beta of ${b}, meaning it is significantly more volatile than the broader market. For every 1% move in the S&P 500, ${ticker} has historically moved approximately ${b}% in the same direction. This elevated systematic risk is common in high-growth or cyclically sensitive companies whose valuations swing sharply with macroeconomic conditions and investor risk appetite.`;
-  } else if (beta > 1.1) {
-    p1 = `With a beta of ${b}, ${name} is moderately more volatile than the S&P 500. The stock amplifies market moves slightly, making it more sensitive to interest rate changes, earnings surprises, and shifts in broad market sentiment. This profile is typical of growth-oriented companies where future cash flows are heavily discounted by prevailing risk preferences.`;
-  } else if (beta > 0.8) {
-    p1 = `${name} has a beta of ${b}, placing it close to the market average of 1.0. The stock tends to move roughly in lockstep with the S&P 500 — neither a high-beta growth bet nor a defensive holding. This makes its systematic risk profile relatively predictable and straightforward to price under the CAPM framework.`;
-  } else if (beta > 0) {
-    p1 = `${name} has a low beta of ${b}, indicating below-average sensitivity to broad market moves. The stock dampens S&P 500 swings, a defensive characteristic often found in utilities, consumer staples, and companies with stable, recurring cash flows that are less tethered to the economic cycle.`;
-  } else {
-    p1 = `${name} has a beta of ${b}, suggesting it moves largely independently of — or even inversely to — the broader market. This unusual risk profile may reflect the company's counter-cyclical business model, commodity exposure, or its role as a traditional safe-haven asset.`;
+// ── MANUAL ENTRY ──
+function runManual() {
+  const beta = parseFloat(document.getElementById('manual-beta').value);
+  if (isNaN(beta) || beta < -5 || beta > 15) {
+    showError('Please enter a valid beta value (typically between -1 and 4).');
+    return;
   }
 
-  let p2;
-  if (er > rm * 1.15) {
-    p2 = `The CAPM model requires an expected annual return of ${erPct}% for ${ticker} — well above the market's assumed ${rmPct}%. This high hurdle rate is the theoretical compensation investors demand for bearing ${ticker}'s above-average systematic risk. Under CAPM logic, the stock is only an attractive holding if it can realistically deliver returns at or above this level over time.`;
-  } else if (er > rm) {
-    p2 = `CAPM implies a required return of ${erPct}% for ${ticker}, modestly above the market average of ${rmPct}%. The equity risk premium of ${(erp*100).toFixed(1)}% is scaled by the beta of ${b}, producing a return expectation that fairly prices the stock's slightly elevated market sensitivity.`;
-  } else if (er > rf * 1.1) {
-    p2 = `The model produces an expected return of ${erPct}% — below the market average of ${rmPct}% but above the risk-free rate of ${rfPct}%. This implies ${ticker} is priced as a relatively low-risk equity, requiring less return premium than the typical stock. The tradeoff is limited upside relative to broader market exposure.`;
-  } else {
-    p2 = `CAPM yields an expected return of only ${erPct}% for ${ticker} — barely above the risk-free rate of ${rfPct}%. The minimal systematic risk means investors are theoretically not compensated much beyond what they could earn in Treasuries, raising questions about whether the residual equity risk is warranted for the additional return.`;
-  }
+  const pe   = parseFloat(document.getElementById('manual-pe').value)   || null;
+  const mcap = parseFloat(document.getElementById('manual-mcap').value) || null;
 
-  const p3 = `As with any CAPM application, these results carry important caveats. CAPM is a single-factor model that assumes only market risk is priced, ignoring well-documented return premia tied to firm size, value, profitability, and momentum. Beta is backward-looking and estimated from historical prices; it may not capture ${ticker}'s current or forward-looking risk profile if the company's leverage, business mix, or competitive dynamics have shifted. The ${rmPct}% market return assumption is a long-run historical average and may not reflect near-term expectations in the current rate environment. Treat these figures as a structured starting point for analysis, not a definitive investment conclusion.`;
-
-  return [p1, p2, p3].join('\n\n');
+  document.getElementById('manual-section').style.display = 'none';
+  compute(currentTicker, currentTicker, beta, pe, mcap, true);
 }
 
-function getVerdict(er, rm, rf) {
-  if (er >= rm * 1.12) return 'BUY';
-  if (er <= rf * 1.15)  return 'SELL';
-  return 'HOLD';
-}
+// ── COMPUTE & RENDER ──
+function compute(ticker, name, beta, pe, mcapB, isManual) {
+  const er  = RF + beta * (RM - RF);
+  const erp = RM - RF;
 
-function getVerdictContent(verdict, er, rm, rf, beta, ticker) {
-  const erPct = (er * 100).toFixed(1);
-  const rmPct = (rm * 100).toFixed(1);
-  const b     = beta.toFixed(2);
-
-  if (verdict === 'BUY') {
-    return {
-      headline: `High risk priced in — return premium justifies exposure`,
-      reasoning: `CAPM prices ${ticker} at ${erPct}% annually, well above the market's ${rmPct}%, reflecting meaningful compensation for its beta of ${b}. Under pure CAPM logic, the required return hurdle is high enough that systematic risk is fairly rewarded.`
-    };
-  }
-  if (verdict === 'SELL') {
-    return {
-      headline: `Return barely clears risk-free rate — limited reward`,
-      reasoning: `At ${erPct}%, the CAPM-implied return is barely above the risk-free rate, meaning investors receive little premium for holding equity risk. CAPM logic suggests the risk-reward is unfavorable relative to safer alternatives.`
-    };
-  }
-  return {
-    headline: `Market-rate return — risk and reward in balance`,
-    reasoning: `${ticker}'s CAPM expected return of ${erPct}% is near the market average of ${rmPct}%, implying the stock's systematic risk is priced roughly in line with the broader market. Neither a compelling risk premium nor an obvious shortfall.`
-  };
-}
-
-function renderResults(ticker, stock, rf, rm, beta, er) {
-  const erp = rm - rf;
-
-  document.getElementById('r-company').textContent = stock.name;
+  // Company banner
+  document.getElementById('r-company').textContent = name;
   document.getElementById('r-ticker').textContent  = ticker;
-  document.getElementById('r-price').textContent   = stock.price ? `$${stock.price.toFixed(2)}` : '';
+  document.getElementById('r-price').textContent   = '';
 
+  // Hero
   document.getElementById('r-expected').textContent = pct(er);
-  const rctx = er > rm ? 'Above market avg — higher systematic risk priced in'
-             : er < rf ? 'Below risk-free rate — very low systematic risk'
-             : 'Near market average — market-like risk profile';
-  document.getElementById('r-return-context').textContent = rctx;
+  document.getElementById('r-return-context').textContent =
+    er > RM   ? 'Above market avg — higher systematic risk priced in'
+    : er < RF ? 'Below risk-free rate — very low systematic risk'
+    :           'Near market average — market-like risk profile';
 
+  // Formula
   document.getElementById('fb-plug-val').textContent =
-    `${pct(rf)} + ${f2(beta)} × (${pct(rm)} − ${pct(rf)}) = ${pct(rf)} + ${f2(beta)} × ${pct(erp)}`;
+    `${pct(RF)} + ${f2(beta)} × (${pct(RM)} − ${pct(RF)}) = ${pct(RF)} + ${f2(beta)} × ${pct(erp)}`;
   document.getElementById('fb-result').textContent = pct(er);
 
-  document.getElementById('r-rf').textContent   = pct(rf);
+  // Metrics
+  document.getElementById('r-rf').textContent   = pct(RF);
   document.getElementById('r-beta').textContent = f2(beta);
   const betaDesc = beta > 1.2 ? `High volatility — ${f2(beta)}× market swings`
                  : beta < 0.8 ? `Defensive — dampens market moves`
-                 : `Market-like sensitivity`;
-  document.getElementById('r-beta-desc').textContent = '5Y monthly vs S&P 500 · ' + betaDesc;
-  document.getElementById('r-rm').textContent   = pct(rm);
+                 :              `Market-like sensitivity`;
+  document.getElementById('r-beta-desc').textContent =
+    (isManual ? 'Manually entered' : 'Database · approx Q1 2026') + ' · ' + betaDesc;
+  document.getElementById('r-rm').textContent   = pct(RM);
   document.getElementById('r-erp').textContent  = pct(erp);
-  document.getElementById('r-pe').textContent   = stock.trailingPE  ? f2(stock.trailingPE) + 'x' : 'N/A';
-  document.getElementById('r-mcap').textContent = stock.marketCapB  ? '$' + stock.marketCapB.toFixed(1) + 'B' : 'N/A';
+  document.getElementById('r-pe').textContent   = pe   ? f2(pe) + 'x' : 'N/A';
+  document.getElementById('r-mcap').textContent = mcapB ? '$' + mcapB.toFixed(1) + 'B' : 'N/A';
 
-  const analysis = generateAnalysis(ticker, stock.name, beta, rf, rm, er);
-  const paras = analysis.split('\n\n').filter(p => p.trim());
+  // Analysis
+  const paras = generateAnalysis(ticker, name, beta, RF, RM, er).split('\n\n');
   document.getElementById('r-analysis').innerHTML = paras.map(p => `<p>${p.trim()}</p>`).join('');
 
-  const verdict = getVerdict(er, rm, rf);
-  const vc = getVerdictContent(verdict, er, rm, rf, beta, ticker);
+  // Verdict
+  const verdict = er >= RM * 1.12 ? 'BUY' : er <= RF * 1.15 ? 'SELL' : 'HOLD';
+  const vc = verdictContent(verdict, er, RM, RF, beta, ticker);
   const vs = document.getElementById('verdict-section');
   vs.className = 'verdict-section fade-in d6 ' + verdict.toLowerCase();
   document.getElementById('verdict-label').textContent    = 'CAPM Signal — ' + verdict;
@@ -896,29 +828,79 @@ function renderResults(ticker, stock, rf, rm, beta, er) {
   document.getElementById('verdict-headline').textContent = vc.headline;
   document.getElementById('verdict-body').textContent     = vc.reasoning;
 
-  document.getElementById('sources-row').innerHTML = [
-    'Beta · Yahoo Finance (5Y monthly)',
-    'Price · Yahoo Finance (real-time)',
-    `Risk-free rate · US 10Y Treasury (~${pct(rf)})`,
-    'Market return · S&P 500 long-run avg (10%)',
-  ].map(s => `<span class="source-pill">${s}</span>`).join('');
+  // Sources
+  const src = isManual
+    ? ['Beta · entered manually by user', `Risk-free rate · US 10Y Treasury (~${pct(RF)})`, 'Market return · S&P 500 long-run avg (10%)']
+    : [`Beta · database (Yahoo Finance 5Y monthly, approx Q1 2026)`, `Risk-free rate · US 10Y Treasury (~${pct(RF)})`, 'Market return · S&P 500 long-run avg (10%)'];
+  document.getElementById('sources-row').innerHTML = src.map(s => `<span class="source-pill">${s}</span>`).join('');
 
-  buildChart(ticker, rf, beta, rm, er);
+  buildChart(ticker, RF, beta, RM, er);
 
-  document.getElementById('loading-state').style.display = 'none';
   document.getElementById('results').style.display = 'block';
   document.getElementById('calc-btn').disabled = false;
   document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function generateAnalysis(ticker, name, beta, rf, rm, er) {
+  const b      = beta.toFixed(2);
+  const erPct  = (er  * 100).toFixed(1);
+  const rfPct  = (rf  * 100).toFixed(1);
+  const rmPct  = (rm  * 100).toFixed(1);
+  const erpPct = ((rm - rf) * 100).toFixed(1);
+
+  let p1;
+  if (beta > 1.5)
+    p1 = `${name} carries a high beta of ${b}, meaning it is significantly more volatile than the broader market. For every 1% move in the S&P 500, ${ticker} tends to move approximately ${b}% in the same direction. This elevated systematic risk reflects a company whose fortunes are closely tied to — and amplified by — macroeconomic cycles and investor risk appetite.`;
+  else if (beta > 1.1)
+    p1 = `With a beta of ${b}, ${name} exhibits above-market volatility, moving somewhat more sharply than the S&P 500 in both directions. This moderate-to-high systematic risk profile is typical of growth-oriented companies whose valuations are sensitive to changes in interest rates and earnings expectations.`;
+  else if (beta > 0.8)
+    p1 = `${name} has a beta of ${b}, placing it close to the market average of 1.0. The stock moves in rough lockstep with the S&P 500, making it neither a high-volatility growth bet nor a defensive holding — a relatively predictable systematic risk profile.`;
+  else if (beta > 0)
+    p1 = `${name} has a low beta of ${b}, indicating below-average sensitivity to broad market moves. The stock dampens S&P 500 swings, a defensive characteristic common among companies with stable, recurring cash flows less sensitive to the economic cycle.`;
+  else
+    p1 = `${name} has a beta of ${b}, suggesting it moves largely independently of — or inversely to — the broader market. This unusual risk profile may reflect counter-cyclical business dynamics or commodity exposure that offsets general market movements.`;
+
+  let p2;
+  if (er > rm * 1.15)
+    p2 = `CAPM prices in an expected annual return of ${erPct}% for ${ticker} — well above the market's assumed ${rmPct}%. This elevated hurdle rate is the compensation investors theoretically demand for bearing ${ticker}'s above-average systematic risk. Under CAPM logic, the stock must deliver returns at or above this level to justify its risk profile.`;
+  else if (er > rm)
+    p2 = `CAPM implies a required return of ${erPct}% for ${ticker}, modestly above the market average of ${rmPct}%. The equity risk premium of ${erpPct}% is scaled up by the beta of ${b}, producing a return expectation that reflects the stock's slightly elevated market sensitivity.`;
+  else if (er > rf * 1.1)
+    p2 = `The model produces an expected return of ${erPct}% — below the market average of ${rmPct}% but above the risk-free rate of ${rfPct}%. This implies ${ticker} is priced as a relatively low-risk equity, requiring less return premium than a typical market investment.`;
+  else
+    p2 = `CAPM yields an expected return of only ${erPct}% for ${ticker} — barely above the risk-free rate of ${rfPct}%. The minimal systematic risk means investors receive little theoretical compensation beyond what they could earn in Treasuries, raising questions about whether the equity risk is justified.`;
+
+  const p3 = `As with any CAPM application, these results carry important caveats. CAPM is a single-factor model that assumes only market risk is priced, ignoring size, value, profitability, and momentum premia. Beta is estimated from historical prices and may not reflect ${ticker}'s forward-looking risk profile if leverage, business mix, or competitive dynamics have shifted. The assumed ${rmPct}% market return is a long-run historical average that may not hold in the current environment. Treat these figures as a structured starting point for analysis, not a definitive investment conclusion.`;
+
+  return [p1, p2, p3].join('\n\n');
+}
+
+function verdictContent(verdict, er, rm, rf, beta, ticker) {
+  const erPct = (er * 100).toFixed(1);
+  const rmPct = (rm * 100).toFixed(1);
+  const b     = beta.toFixed(2);
+  if (verdict === 'BUY') return {
+    headline: 'High risk priced in — return premium justifies exposure',
+    reasoning: `CAPM prices ${ticker} at ${erPct}% annually, well above the market's ${rmPct}%, reflecting meaningful compensation for its beta of ${b}. Under pure CAPM logic, the required return is high enough that systematic risk is fairly rewarded.`
+  };
+  if (verdict === 'SELL') return {
+    headline: 'Return barely clears risk-free rate — limited reward',
+    reasoning: `At ${erPct}%, the CAPM-implied return is near the risk-free rate, meaning investors receive little premium for holding equity risk. CAPM logic suggests the risk-reward is unfavorable relative to safer alternatives.`
+  };
+  return {
+    headline: 'Market-rate return — risk and reward in balance',
+    reasoning: `${ticker}'s CAPM expected return of ${erPct}% is near the market average of ${rmPct}%, implying systematic risk is priced roughly in line with the broader market — neither a compelling premium nor an obvious shortfall.`
+  };
 }
 
 function buildChart(ticker, rf, beta, rm, er) {
   const ctx = document.getElementById('capm-chart').getContext('2d');
   if (chartInstance) chartInstance.destroy();
 
-  const smlBetas = [], smlReturns = [];
+  const smlX = [], smlY = [];
   for (let b = 0; b <= 2.5; b += 0.1) {
-    smlBetas.push(parseFloat(b.toFixed(1)));
-    smlReturns.push((rf + b * (rm - rf)) * 100);
+    smlX.push(parseFloat(b.toFixed(1)));
+    smlY.push((rf + b * (rm - rf)) * 100);
   }
 
   chartInstance = new Chart(ctx, {
@@ -927,73 +909,46 @@ function buildChart(ticker, rf, beta, rm, er) {
       datasets: [
         {
           label: 'Security Market Line (SML)',
-          data: smlBetas.map((b,i) => ({ x: b, y: smlReturns[i] })),
-          type: 'line',
-          borderColor: 'rgba(201,168,76,0.5)',
-          borderWidth: 1.5,
-          pointRadius: 0,
-          fill: false,
-          tension: 0,
-          order: 2
+          data: smlX.map((b,i) => ({ x: b, y: smlY[i] })),
+          type: 'line', borderColor: 'rgba(201,168,76,0.5)',
+          borderWidth: 1.5, pointRadius: 0, fill: false, tension: 0, order: 2
         },
         {
           label: ticker + ' (CAPM)',
           data: [{ x: parseFloat(beta.toFixed(2)), y: parseFloat((er*100).toFixed(3)) }],
-          backgroundColor: '#c9a84c',
-          borderColor: '#0a0a0f',
-          borderWidth: 2,
-          pointRadius: 9,
-          pointHoverRadius: 11,
-          order: 1
+          backgroundColor: '#c9a84c', borderColor: '#0a0a0f',
+          borderWidth: 2, pointRadius: 9, pointHoverRadius: 11, order: 1
         },
         {
           label: 'Market (β=1)',
           data: [{ x: 1, y: parseFloat((rm*100).toFixed(2)) }],
-          backgroundColor: '#5c8fe0',
-          borderColor: '#0a0a0f',
-          borderWidth: 2,
-          pointRadius: 7,
-          pointHoverRadius: 9,
-          order: 1
+          backgroundColor: '#5c8fe0', borderColor: '#0a0a0f',
+          borderWidth: 2, pointRadius: 7, pointHoverRadius: 9, order: 1
         },
         {
           label: 'Risk-Free (β=0)',
           data: [{ x: 0, y: parseFloat((rf*100).toFixed(2)) }],
-          backgroundColor: '#4caf7d',
-          borderColor: '#0a0a0f',
-          borderWidth: 2,
-          pointRadius: 7,
-          pointHoverRadius: 9,
-          order: 1
+          backgroundColor: '#4caf7d', borderColor: '#0a0a0f',
+          borderWidth: 2, pointRadius: 7, pointHoverRadius: 9, order: 1
         }
       ]
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
+      responsive: true, maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: true,
-          position: 'bottom',
-          labels: {
-            color: '#888880',
-            font: { family: 'DM Mono, monospace', size: 11 },
-            boxWidth: 10,
-            padding: 16
-          }
+          display: true, position: 'bottom',
+          labels: { color: '#888880', font: { family: 'DM Mono, monospace', size: 11 }, boxWidth: 10, padding: 16 }
         },
         tooltip: {
-          backgroundColor: '#18181f',
-          borderColor: 'rgba(255,255,255,0.1)',
-          borderWidth: 1,
-          titleColor: '#c9a84c',
-          bodyColor: '#f0efe8',
+          backgroundColor: '#18181f', borderColor: 'rgba(255,255,255,0.1)', borderWidth: 1,
+          titleColor: '#c9a84c', bodyColor: '#f0efe8',
           titleFont: { family: 'DM Mono, monospace', size: 11 },
-          bodyFont: { family: 'DM Mono, monospace', size: 11 },
+          bodyFont:  { family: 'DM Mono, monospace', size: 11 },
           padding: 12,
           callbacks: {
             title: items => 'β = ' + items[0].parsed.x.toFixed(2),
-            label: item => item.dataset.label + ': ' + item.parsed.y.toFixed(2) + '%'
+            label: item  => item.dataset.label + ': ' + item.parsed.y.toFixed(2) + '%'
           }
         }
       },
