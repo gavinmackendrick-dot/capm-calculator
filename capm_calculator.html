@@ -724,34 +724,38 @@ const RISK_FREE_RATE = 0.044;
 
 async function fetchStockData(ticker) {
   const modules = 'defaultKeyStatistics,price,summaryDetail';
-  const yahooUrl = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${ticker}?modules=${modules}`;
+  const y1 = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${ticker}?modules=${modules}`;
+  const y2 = `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${ticker}?modules=${modules}`;
 
-  // Try two CORS proxies in case one is down
-  const proxies = [
-    'https://corsproxy.io/?' + encodeURIComponent(yahooUrl),
-    'https://api.allorigins.win/get?url=' + encodeURIComponent(yahooUrl),
+  // Each entry: [fetchUrl, isWrapped] — allorigins wraps response in {contents:"..."}
+  const attempts = [
+    [() => `https://corsproxy.io/?${y1}`,                              false],
+    [() => `https://corsproxy.io/?${y2}`,                              false],
+    [() => `https://api.allorigins.win/get?url=${encodeURIComponent(y1)}`, true],
+    [() => `https://api.allorigins.win/get?url=${encodeURIComponent(y2)}`, true],
+    [() => `https://api.codetabs.com/v1/proxy/?quest=${y1}`,           false],
   ];
 
   let json = null;
-  for (const proxyUrl of proxies) {
+  for (const [urlFn, wrapped] of attempts) {
     try {
-      const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(10000) });
+      const res = await fetch(urlFn(), { signal: AbortSignal.timeout(10000) });
       if (!res.ok) continue;
       const raw = await res.json();
-      // allorigins wraps in {contents: "..."}
-      json = raw.contents ? JSON.parse(raw.contents) : raw;
-      if (json?.quoteSummary?.result) break;
+      json = wrapped ? JSON.parse(raw.contents) : raw;
+      if (json?.quoteSummary?.result?.[0]) break;
+      json = null;
     } catch (_) { continue; }
   }
 
   if (!json?.quoteSummary?.result?.[0]) {
-    throw new Error(`Could not fetch data for "${ticker}". Check the ticker and try again.`);
+    throw new Error(`Could not load data for "${ticker}" — all data sources failed. Try again in a moment.`);
   }
 
-  const result  = json.quoteSummary.result[0];
-  const ks      = result.defaultKeyStatistics || {};
-  const pr      = result.price              || {};
-  const sd      = result.summaryDetail      || {};
+  const result = json.quoteSummary.result[0];
+  const ks     = result.defaultKeyStatistics || {};
+  const pr     = result.price               || {};
+  const sd     = result.summaryDetail       || {};
 
   const beta = ks.beta?.raw ?? sd.beta?.raw;
   if (beta == null) throw new Error(`Beta not available for "${ticker}".`);
